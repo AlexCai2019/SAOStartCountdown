@@ -1,0 +1,1 @@
+let r=new Date("Nov 6,2022 13:00:00")-new Date().getTime();let t=[Math.floor(r/86400000),Math.floor(r%86400000/3600000),Math.floor(r%3600000/60000),Math.floor(r%60000/1000)];let x=setInterval(()=>{document.getElementById("d").innerHTML=t[0]+" 天 "+t[1]+" 小時 "+t[2]+" 分鐘 "+t[3]+" 秒";if(--t[3]<0){t[3]=59;if(--t[2]<0){t[2]=59;if(--t[1]<0){t[1]=23;t[0]--;}}}},1000)
